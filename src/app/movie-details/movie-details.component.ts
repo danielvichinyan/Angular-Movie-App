@@ -11,6 +11,7 @@ import { MovieService } from '../services/movie.service';
 export class MovieDetailsComponent implements OnInit {  
   id: string;
   movie: MovieDetails;
+  movieGenres: string;
   constructor(
     private moviesService: MovieService,
     private route: ActivatedRoute
@@ -26,6 +27,9 @@ export class MovieDetailsComponent implements OnInit {
       .getMovieById(this.id)
       .subscribe((data) => {
         this.movie = data;
+        this.movieGenres = this.movie.genres
+          .map(el => el['name'])
+          .join(' ');
       })
   }
 
