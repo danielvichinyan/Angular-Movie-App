@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import Movie from '../models/Movie';
+import Movie from '../../models/Movie';
 import { Subscription } from 'rxjs';
 import { ActivatedRoute } from '@angular/router';
 @Component({

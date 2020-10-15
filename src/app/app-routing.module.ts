@@ -1,9 +1,9 @@
 import { NgModule } from '@angular/core';
 import { Route, RouterModule } from '@angular/router';
-import { MoviesComponent } from './movies/movies.component';
-import { MovieDetailsComponent } from './movie-details/movie-details.component';
+import { MoviesComponent } from './components/movies/movies.component';
+import { MovieDetailsComponent } from './components/movie-details/movie-details.component';
 import { SingleMovieResolver } from './services/resolvers/single-movie.resolver';
-import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieSearchComponent } from './components/movie-search/movie-search.component';
 import { MovieListResolver } from './services/resolvers/movie-list.resolver';
 
 const appRoutes: Route[] = [

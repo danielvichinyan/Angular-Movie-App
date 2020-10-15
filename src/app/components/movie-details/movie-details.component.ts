@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import MovieDetails from '../models/MovieDetails';
+import { ActivatedRoute } from '@angular/router';
+import MovieDetails from '../../models/MovieDetails';
 
 @Component({
   selector: 'app-movie-details',
@@ -10,6 +10,7 @@ import MovieDetails from '../models/MovieDetails';
 export class MovieDetailsComponent implements OnInit { 
   movie: MovieDetails;
   movieGenres: string;
+  
   constructor(
     private route: ActivatedRoute
   ) { }
