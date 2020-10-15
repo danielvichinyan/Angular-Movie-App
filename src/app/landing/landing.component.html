@@ -2,9 +2,18 @@
     <div class="container">
       <h1>Find a movie.</h1>
       <p>Search for a movie using the form below:</p>
-      <form>
-        <input type="text" class="form-control input-lg" placeholder="Search" aria-label="Search">
-        <button class="btn btn-default mt-2" type="submit">Search</button>
+      <form #f="ngForm" (ngSubmit)="search()">
+        <input 
+          required
+          minlength="3"
+          name="query"
+          type="text" 
+          class="form-control input-lg" 
+          placeholder="Search" 
+          aria-label="Search"
+          ngModel
+        >
+        <button [disabled]="f.invalid" class="btn btn-default mt-2" type="submit">Search</button>
       </form>
     </div>
 </div>
