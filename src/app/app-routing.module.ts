@@ -4,6 +4,7 @@ import { MoviesComponent } from './movies/movies.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { SingleMovieResolver } from './services/resolvers/single-movie.resolver';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieListResolver } from './services/resolvers/movie-list.resolver';
 
 const appRoutes: Route[] = [
   { path: '', pathMatch: 'full', redirectTo: 'movies'},
@@ -13,7 +14,8 @@ const appRoutes: Route[] = [
   },
    
   { path: 'movies', 
-    component: MoviesComponent 
+    component: MoviesComponent,
+    resolve: { movies: MovieListResolver }
   },
 
   { path: 'movies/:id', 

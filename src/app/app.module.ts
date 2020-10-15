@@ -14,6 +14,7 @@ import { FooterComponent } from './footer/footer.component';
 import { MovieDetailsComponent } from './movie-details/movie-details.component';
 import { SingleMovieResolver } from './services/resolvers/single-movie.resolver';
 import { MovieSearchComponent } from './movie-search/movie-search.component';
+import { MovieListResolver } from './services/resolvers/movie-list.resolver';
 
 
 @NgModule({
@@ -33,7 +34,7 @@ import { MovieSearchComponent } from './movie-search/movie-search.component';
     FormsModule,
     HttpClientModule
   ],
-  providers: [MovieService, SingleMovieResolver],
+  providers: [MovieService, SingleMovieResolver, MovieListResolver],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
